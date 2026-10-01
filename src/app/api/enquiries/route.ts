@@ -1,6 +1,7 @@
 import { randomUUID } from "node:crypto";
 import { isIP } from "node:net";
 import { NextResponse } from "next/server";
+import { businessContact } from "@/lib/site-data";
 
 export const runtime = "nodejs";
 
@@ -151,9 +152,8 @@ export async function POST(request: Request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY;
-  const recipient = process.env.CONTACT_EMAIL_TO;
   const sender = process.env.CONTACT_EMAIL_FROM;
-  if (!apiKey || !recipient || !sender) {
+  if (!apiKey || !sender) {
     return errorResponse(
       "Our enquiry service is temporarily unavailable. Please try again later.",
       503,
@@ -185,7 +185,7 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({
         from: sender,
-        to: [recipient],
+        to: [businessContact.email],
         reply_to: enquiry.email,
         subject: `Website enquiry — ${enquiry.service} (${reference})`,
         text: message,

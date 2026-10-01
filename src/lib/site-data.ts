@@ -1,7 +1,7 @@
 export const businessContact = {
   address: "348 Kingsway, Manchester M19 1PW, UK",
   phoneNumbers: ["+966 53 802 6963", "+44 7759 546753", "+44 7828 669995"],
-  email: "info@efficientsurveyors.com",
+  email: "asadtaj1293@gmail.com",
 } as const;
 
 export const brandName = "Perfect Surveyors";

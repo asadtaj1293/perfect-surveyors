@@ -22,15 +22,15 @@ local `.env.local` file or the hosting provider’s secret settings:
 
 ```text
 RESEND_API_KEY=
-CONTACT_EMAIL_TO=
 CONTACT_EMAIL_FROM=
 ```
 
 `CONTACT_EMAIL_FROM` must be a sender address verified with Resend. Keep these
-values private and never add them to client-side code. Until all three are
-configured, the form returns a clear temporary-unavailable message rather than
-pretending an enquiry was delivered. The website does not store submissions in
-a database.
+values private and never add them to client-side code. Enquiries submitted
+through the contact form are sent to `asadtaj1293@gmail.com`. The form returns
+a clear temporary-unavailable message until the Resend API key and verified
+sender are configured, rather than pretending an enquiry was delivered. The
+website does not store submissions in a database.
 
 The enquiry endpoint validates fields on the server, limits request size,
 uses a honeypot and applies a basic per-process IP rate limit. The in-memory
