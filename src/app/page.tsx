@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ServiceCard } from "@/components/service-card";
 import { serviceGroups } from "@/lib/site-data";
 
@@ -55,39 +56,15 @@ export default function Home() {
               Advice for the places and projects that matter.
             </div>
           </div>
-          <div aria-label="Architectural illustration of a surveyed building" className="hero-art" role="img">
-            <div className="art-sun" />
-            <div className="art-ground" />
-            <div className="art-building art-building-back">
-              <span />
-              <span />
-            </div>
-            <div className="art-building art-building-front">
-              <div className="art-roof" />
-              <div className="art-front-wall">
-                <span className="art-window" />
-                <span className="art-window" />
-                <span className="art-door" />
-              </div>
-              <div className="art-side-wall">
-                <span className="art-window" />
-              </div>
-            </div>
-            <div className="art-grid-lines" />
-            <div className="art-label art-label-top">
-              <span>01 / PROPERTY</span>
-              <span>CONDITION</span>
-            </div>
-            <div className="art-label art-label-bottom">
-              <span className="art-label-rule" />
-              BUILT ON BETTER UNDERSTANDING
-            </div>
-            <span aria-hidden="true" className="art-coordinate art-coordinate-one">
-              N 51° 30&apos;
-            </span>
-            <span aria-hidden="true" className="art-coordinate art-coordinate-two">
-              E 00° 07&apos;
-            </span>
+          <div className="hero-art">
+            <Image
+              alt="Two-storey brick and rendered home with a driveway"
+              className="hero-art-image"
+              fill
+              priority
+              sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1000px) 45vw, 50vw"
+              src="/images/home-property.png"
+            />
           </div>
         </div>
         <div aria-hidden="true" className="hero-bottom-line">
