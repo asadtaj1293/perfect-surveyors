@@ -25,6 +25,15 @@ export default function Home() {
   return (
     <main id="main-content">
       <section className="hero">
+        <div aria-hidden="true" className="hero-background">
+          <Image
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            src="/images/home-property.png"
+          />
+        </div>
         <div className="hero-grid container">
           <div className="hero-content">
             <span className="eyebrow">
@@ -55,16 +64,6 @@ export default function Home() {
               </span>
               Advice for the places and projects that matter.
             </div>
-          </div>
-          <div className="hero-art">
-            <Image
-              alt="Two-storey brick and rendered home with a driveway"
-              className="hero-art-image"
-              fill
-              priority
-              sizes="(max-width: 760px) calc(100vw - 48px), (max-width: 1000px) 45vw, 50vw"
-              src="/images/home-property.png"
-            />
           </div>
         </div>
         <div aria-hidden="true" className="hero-bottom-line">

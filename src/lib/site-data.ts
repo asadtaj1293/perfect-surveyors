@@ -113,8 +113,8 @@ export const serviceDetails = {
     title: "Building Survey",
     category: "Property surveying",
     parent: "property-surveying",
-    image: "/images/services/building-survey.jpg",
-    imageAlt: "An architect reviewing a building plan",
+    image: "/images/home-property.png",
+    imageAlt: "A two-storey brick and rendered home with a driveway",
     intro:
       "A thorough visual assessment that helps you build a fuller picture of a property’s condition, construction and maintenance needs.",
     sections: [
